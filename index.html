@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="registration" novalidate>
+        <h2>Создайте новый аккаунт </h2>
+        <div><input type="text" placeholder="Имя" id="name" required></div>
+        <div><input type="text" placeholder="Фамилия" id="family" required></div>
+        <div><input type="text" placeholder="Имя пользователя" id="login" required></div>
+        <div><input type="text" placeholder="Телефонный номер" id="tel" pattern="\+?[0-9\s\-\(\)]+" required>+7(xxx)xxx-xx-xx</div>
+        <div><input type="email" placeholder="Email" id="email" pattern="/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/i" required></div>
+        <div><input type="text" placeholder ="Пароль" id="password" required></div>
+       <div><button type="submit" onclick="checkAll();">Регистрация</button></div>
+       <div><button type="button" id="postButton">Отправить</button></div>
+        <div id="errorMessage"></div>
+        <div id="success"></div>
+    </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
